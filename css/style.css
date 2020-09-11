@@ -1,0 +1,316 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  background: #f6f6f6;
+  font-family: "Lora", serif;
+}
+header {
+  background-color: #008489;
+  height: 66px;
+}
+
+header * {
+  color: white;
+}
+
+header .logo {
+  height: inherit;
+  float: left;
+  margin-left: 2em;
+}
+
+header .logo-text {
+  margin: 10px;
+  font-family: "Candal", serif;
+}
+
+header .logo-text span {
+  color: #05f7ff;
+}
+
+header ul {
+  float: right;
+  padding: 0px;
+  padding-right: 50px;
+  margin: 0px;
+  list-style: none;
+}
+
+header ul li {
+  float: left;
+  position: relative;
+}
+
+header ul li ul {
+  position: absolute;
+  top: 66px;
+  right: 0px;
+  width: 180px;
+  display: none;
+}
+
+header ul li:hover ul {
+  display: block;
+}
+
+header ul li ul li {
+  width: 100%;
+}
+
+header ul li ul li a {
+  padding: 10px;
+  color: #444;
+  background: white;
+}
+
+header ul li ul li a:hover {
+  background: #d5d6d6;
+}
+
+header ul li ul li a.logout {
+  color: red;
+}
+
+header ul li a {
+  display: block;
+  padding: 21px;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+header ul li a:hover {
+  background: #006669;
+  transition: 0.5s;
+}
+
+header .menu-toggle {
+  display: none;
+}
+
+/* MEDIA QUERIES for HEADER */
+@media only screen and (max-width: 850px) {
+  header {
+    position: relative;
+  }
+
+  header ul {
+    background: #0e94a0;
+    /* max-height: 0px; */
+    width: 100%;
+    /* overflow: hidden; */
+    display: none;
+  }
+
+  .showing {
+    /* max-height: 100em; */
+    display: block;
+  }
+
+  header ul li {
+    width: 100%;
+  }
+
+  header ul li ul {
+    display: block;
+    width: 100%;
+    position: static;
+  }
+
+  header ul li ul li a {
+    background: #0e94a0;
+    color: white;
+    padding: 10px;
+    padding-left: 50px;
+  }
+
+  header ul li ul li a:hover {
+    background: #006669;
+  }
+
+  header .menu-toggle {
+    display: block;
+    right: 20px;
+    top: 20px;
+    font-size: 1.9em;
+    position: absolute;
+  }
+
+  header .logo {
+    margin-left: 0.5em;
+  }
+
+  header .logo-text {
+    font-size: 1.7em;
+    transition: 0.5s;
+  }
+
+  header .logo-text span {
+    color: #05f7ff;
+  }
+}
+/* MEDIA QUERIES for HEADER */
+
+/* PAGE WRAPPER */
+.page-wrapper {
+  min-height: 70%;
+  background: url("../images/home-bg.jpg");
+  background-size: 100%;
+  background-position: center;
+}
+
+.comming-soon {
+  color: rgb(18, 238, 84);
+  margin: 0px;
+  padding: 0px;
+}
+.comming-soon h1 {
+  position: absolute;
+  right: 100px;
+  top: 100px;
+  margin: 0px;
+}
+/* PAGE WRAPPER */
+
+/* FOOTER */
+footer {
+  margin-top: 0px;
+  background: rgb(37, 37, 37);
+  color: #d3d3d3;
+  padding: 20px 20px;
+  position: relative;
+}
+
+.footer-content {
+  height: 350px;
+  display: flex;
+}
+
+.footer-botton {
+  background-color: #343a40;
+  color: #668866;
+  height: 50px;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.footer-botton a {
+  text-decoration: none;
+  color: #668866;
+}
+
+.footer-content h1,
+h2 {
+  color: white;
+}
+
+.footer-content .about h1 span {
+  color: #05f7ff;
+}
+
+.footer-content .about .contact span {
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+
+.footer-content .about .socials a {
+  border: 1px solid gray;
+  color: #bebdbd;
+  width: 45px;
+  height: 41px;
+  padding-top: 5px;
+  margin-right: 5px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.5em;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.footer-content .links ul a {
+  text-decoration: none;
+  color: #d3d3d3;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  transition: all 0.3s;
+}
+
+.footer-content .links ul a:hover {
+  color: white;
+  margin-left: 15px;
+  transition: all 0.3s;
+}
+
+.footer-content .about .socials a:hover {
+  border: 1px solid white;
+  color: white;
+  transition: all 0.3s;
+}
+
+.footer-content .footersection {
+  flex: 1;
+  padding: 25px;
+}
+
+.footer-content .contact-form {
+  display: inline-block;
+  position: relative;
+}
+
+.footer-content .contact-form .contact-input {
+  width: 100%;
+  background: #272727;
+  color: #bebdbd;
+  margin-bottom: 10px;
+  line-height: 1.5rem;
+  padding: 0.9rem 1.4rem;
+  border: none;
+}
+
+.footer-content .contact-form .contact-input:focus {
+  background-color: #1a1a1a;
+}
+
+.footer-content .contact-form .contact-btn {
+  position: inherit;
+  float: right;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  background: #006669;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+.btn:hover {
+  color: white !important;
+  background: #005255;
+}
+
+.btn-big {
+  padding: 0.7rem 1.3rem;
+  line-height: 1.3rem;
+}
+
+.text-input {
+  padding: 0.7rem 1rem;
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  outline: none;
+  color: #444;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+}
